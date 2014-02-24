@@ -19,7 +19,7 @@ Also you can change from the graphical interface to only command-line. First fin
 ### Using Windows
 
 If you are using Windows you first have to install software that emulates a Unix system or environment. Here is two ways you can do it:
-* **[Running a virtual machine](doc/virtual.md)**
-* **[Cygwin](doc/cygwin.md)**
+* **[Running a virtual machine](virtual.md)**
+* **[Cygwin](cygwin.md)**
 
-### [Using server running Unix](doc/server.md)
+### [Using server running Unix](server.md)
