@@ -22,4 +22,4 @@ If you are using Windows you first have to install software that emulates a Unix
 * **[Running a virtual machine](virtual.md)**
 * **[Cygwin](cygwin.md)**
 
-### [Using server running Unix](server.md)
+### [Using a server running Unix](server.md)
