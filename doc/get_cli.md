@@ -21,5 +21,10 @@ Also you can change from the graphical interface to only command-line. First fin
 If you are using Windows you first have to install software that emulates a Unix system or environment. Here are two ways you can do it:
 * **[Running a virtual machine](virtual.md)**
 * **[Cygwin](cygwin.md)**
+* **[Docker](docker.md)**
 
 ### [Using a server running Unix](server.md)
+
+### [Using Docker](docker.md)
+
+Docker can be used with Linux or OS X operating systems as well.
