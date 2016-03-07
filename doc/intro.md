@@ -27,3 +27,13 @@ why John Gruber has developed a language called **MarkDown**.
 The idea behind **MarkDown** is to have a language where you have
 decent control over the formatting, and the structure is apparent in a
 command line editor, but keeps the formatting commands at a minimal level.
+This language became very popular, because it keeps true to these
+ideas. Besides the language itself there are lots of interpreter
+programs that can turn this simple formatting to other document types,
+such as **HTML** or **PDF**. This has become _the_ language to use
+when creating documentation for software tools. One of the most
+popular websites that is used to share software solutions is
+**GitHub**, where you are probably reading this document.
+
+GitHub employs a version of **MarkDown**, referred to as the ["_GitHub
+Flavored Markdown_"](https://help.github.com/categories/writing-on-github/).
