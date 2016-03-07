@@ -73,6 +73,7 @@ kind of problem. So we need to get active and start implementing the
 little theory that we have discussed so far.
 
 Exercises:
+
 1. Exercise: Registering
 
     Sign up to both websites:
