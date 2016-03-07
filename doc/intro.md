@@ -34,6 +34,20 @@ such as **HTML** or **PDF**. This has become _the_ language to use
 when creating documentation for software tools. One of the most
 popular websites that is used to share software solutions is
 **GitHub**, where you are probably reading this document.
-
 GitHub employs a version of **MarkDown**, referred to as the ["_GitHub
 Flavored Markdown_"](https://help.github.com/categories/writing-on-github/).
+
+## Version control
+After we have found the documenting language of our choice, it is a
+good idea to have a way of keeping track of the changes we make to our
+documents. That is what version control systems are used for. One of the
+most popular system is [**Git**](https://git-scm.com/).
+
+**Git** is the version control that is used by **GitHub** and
+**BitBucket** two websites that use **MarkDown** as primary
+documentation language. These are great places to store your projects,
+because you can access them via the internet and you won't have
+problems like forgetting where you have put your files.
+
+## GitHub and BitBucket
+
