@@ -77,7 +77,6 @@ Exercises:
 1. Exercise: Registering
 
     Sign up to both websites:
-
     - Github: (https://github.com/)
 	- Bitbucket: (https://bitbucket.org/)
 
