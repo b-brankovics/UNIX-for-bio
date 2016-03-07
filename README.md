@@ -1,4 +1,4 @@
-#Using Unix to handle sequence data for molecular biology
+# Using Unix to handle sequence data for molecular biology
 
 The aim of this tutorial is to give an introduction to the Unix environment and tools for people working with sequence data.
 
@@ -6,6 +6,7 @@ The aim of this tutorial is to give an introduction to the Unix environment and 
 
 ## Table of contents
 
+1. **[Introduction](doc/intro.md)**
 1. **[How to access the command-line](doc/get_cli.md)**
 2. **[Text editors](doc/text_editors.md)**
 3. **[Unix basics](doc/unix.md)**
