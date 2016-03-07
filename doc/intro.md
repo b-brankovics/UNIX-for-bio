@@ -23,7 +23,7 @@ you have to put in to properly format your text. This is the reason
 why John Gruber has developed a language called **MarkDown**.
 
 
-## [Markdown](https://daringfireball.net/projects/markdown/basics
+## [Markdown](https://daringfireball.net/projects/markdown/basics)
 The idea behind **MarkDown** is to have a language where you have
 decent control over the formatting, and the structure is apparent in a
 command line editor, but keeps the formatting commands at a minimal level.
