@@ -103,3 +103,22 @@ Exercises:
        notes that you think are good to have, as you explore more
        about in this tutorial.
 
+4. Exercise: Learning more about **Git**, **GitHub** and **BitBucket**
+
+    1. On **Bitbucket** when you register, you automatically get a
+       "Tutorial" repo. Read what it has to say.
+	2. Get a basic understanding how **Git** works by following the
+       [introductory tutorial](https://try.github.io/levels/1/challenges/1).
+	3. Check out what you need to know about
+       [GitHub Flavored Markdown](https://help.github.com/categories/writing-on-github/).
+
+## Conclusions
+1. You have learned how to create and manage repos in
+   **BitBucket**. Feel free to also check out how to do the same
+   things with **GitHub**.
+2. You have learned a new language (**MarkDown**).
+3. You have all you need to keep notes of your work and your new
+   knowledge.
+
+Go back to the main page and begin with the next chapter, so you have
+more things that are worth recording in this newly learned manner.
