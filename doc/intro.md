@@ -1,6 +1,6 @@
 # Introduction to bioinformatics
 
-Bioinformatics is a fairly wage definition. In some sense it contains
+Bioinformatics is a fairly vague definition. In some sense it contains
 everything that is related to biology and is done on a computer.
 
 Like working in the lab it is a good idea to keep notes of what we do
