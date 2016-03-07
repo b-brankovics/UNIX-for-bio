@@ -66,3 +66,16 @@ collaborators, who in turn can also work on the project, without
 having to worry about exposing your work to the great public. This is
 where it is a good idea to switch to **BitBucket**. Because
 **BitBucket** offers you private repositories for free.
+
+## Getting started
+Unfortunately, reading is at best only the first step in solving any
+kind of problem. So we need to get active and start implementing the
+little theory that we have discussed so far.
+
+### Exercise one: Registering
+Sign up to both websites:
+
+- Github: (https://github.com/)
+- Bitbucket: (https://bitbucket.org/)
+
+### Exercise two: Create first document and repository
