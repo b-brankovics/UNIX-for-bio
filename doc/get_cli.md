@@ -22,8 +22,16 @@ If you are using Windows you first have to install software that emulates a Unix
 * **[Running a virtual machine](virtual.md)**
 * **[Cygwin](cygwin.md)**
 * **[Docker](docker.md)**
+* **[PuTTY](http://www.putty.org/)** to connect to a server running a
+  Unix based operating system
 
 ### [Using a server running Unix](server.md)
+
+You will need an **ssh** program to connect to your server.
+On such program is [PuTTY](http://www.putty.org/)
+(If you are
+working on a Linux based system it is better to stick with the command
+line of your system for the moment.)
 
 ### [Using Docker](docker.md)
 

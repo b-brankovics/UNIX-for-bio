@@ -72,10 +72,34 @@ Unfortunately, reading is at best only the first step in solving any
 kind of problem. So we need to get active and start implementing the
 little theory that we have discussed so far.
 
-### Exercise one: Registering
-Sign up to both websites:
+Exercises:
+1. Exercise: Registering
+    Sign up to both websites:
 
-- Github: (https://github.com/)
-- Bitbucket: (https://bitbucket.org/)
+    - Github: (https://github.com/)
+	- Bitbucket: (https://bitbucket.org/)
 
-### Exercise two: Create first document and repository
+2. Exercise: Create first repository
+
+    Look around on [Bitbucket](https://bitbucket.org/) and figure
+    out how to create your first repository. If you want you can
+    even 	make your repository private.
+
+3. Exercise: Experimenting with MarkDown via BitBucket
+
+    1. Go to your first repository.
+    2. You can edit the "README.md" file. This is a MarkDown file that
+       is used to create the Home page of your repository. When you
+       save changes to this file, then the website automatically
+       converts the file to an HTML file, which is used to display the
+       Home page of the repository.
+	4. Start learning the
+	   [MarkDown basics](https://daringfireball.net/projects/markdown/basics)
+	   by following the link (the "_MarkDown basics_" is a link).
+	   Take notes and experiment with the formatting using your
+	   README.md file.
+	5. To see the result of the changes save the file.
+	6. Use this repo (short for repository) and README.md file to take
+       notes that you think are good to have, as you explore more
+       about in this tutorial.
+
