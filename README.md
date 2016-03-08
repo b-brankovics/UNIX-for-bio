@@ -9,5 +9,5 @@ The aim of this tutorial is to give an introduction to the Unix environment and 
 1. **[Introduction](doc/intro.md)**
 1. **[How to access the command-line](doc/get_cli.md)**
 2. **[Text editors](doc/text_editors.md)**
-3. **[Unix basics](doc/unix.md)**
+3. **[Unix basics](doc/unix_basics.md)**
 4. **[Perl](doc/perl.md)**
