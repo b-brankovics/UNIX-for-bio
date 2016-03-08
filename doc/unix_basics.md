@@ -19,19 +19,19 @@ line interface).
 
 # Summary
 1. Learned the some of the basic commands:
-    - ls
-	- pwd
-	- cd
-	- mv
-	- rm
-	- touch
-	- echo
-	- cat
-	- less
-	- head
-	- tail
-	- wc
-	- man
+    - `ls`
+	- `pwd`
+	- `cd`
+	- `mv`
+	- `rm`
+	- `touch`
+	- `echo`
+	- `cat`
+	- `less`
+	- `head`
+	- `tail`
+	- `wc`
+	- `man`
 2. Learned that Unix commands can have options that modify how they work
 3. Learned a few shortcuts:
     - `~` Home directory of the user
