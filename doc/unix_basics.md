@@ -301,16 +301,138 @@ read as well.
 
 ## Reading files
 ### `cat` - concatenate files and print on the standard output
-This command takes the
 
+This command takes the content of all the files that are specified as
+arguments, concatenates them and prints them.
+
+    cat text
+    cat new
+	cat text new
+
+Let's create file with a single line and concatenate it many times to
+the new file. And add line with "The End".
+
+    echo "Extra line to make it longer" >line
+	cat line line line line line line line >lines
+	cat lines lines lines lines lines lines >>new
+	echo "The End" >>new
+
+So `new` is 45 lines long.
+
+### `head` - output the first part of files
+Sometimes we want to see only a part of the content.
+
+    head new
+
+This will print the first ten lines of `new`.
+
+We can specify that we want to see only the first line:
+
+    head -1 new
+
+or
+
+    head -n 1 new
+
+We can also specify how many lines should be left out from the
+end. Let's print it without the "The End".
+
+    head -n -1 new
+
+### `tail` - output the last part of files
+The "opposite" of `head` is `tail`. We can check the end of the file.
+
+    tail new
+
+We can check the last line:
+
+    tail -1 new
+
+We can also specify which should be the first line that is printed. So
+`tail -n +1 new` is the same as `cat new`.
+
+    tail -n +2 new
+
+This prints everything starting with the second line.
+
+We can now print selected lines if we use a **pipe**, `|`. Let's print
+only the second line
+
+    head -2 new | tail -1
+
+The head command read the `new` file and printed the first two lines,
+which were not printed on the screen, bit were fed to the tail
+command, which printed the last line of what it got.
+
+Let's create an extra long file by using parts of the `new` file.
+
+    head -n -1 new >other
+	head -n -1 new | tail -n +3 >>other
+	head -n -1 new | tail -n +3 >>other
+	head -n -1 new | tail -n +3 >>other
+	tail -1 new >>other
 
 ### `more` - file perusal filter for crt viewing
-### `less` - opposite of more
-### `head` - output the first part of files
-### `tail` - output the last part of files
-### `wc` - print newline, word, and byte counts for each file
-### `man` - an interface to the on-line reference manuals
+Sometime a file is to big to display at once, but we still want to see
+the whole content. Simply sometimes we want to see more, so we use
+`more`.
 
+    more other
+
+This will display as many lines as can fit on the screen then it
+waits. If you hit "return"/"enter" then it move one line further in
+the file. If you hit "space" or use "Ctrl+D" it moves by one page. If
+you hit "q" or "Ctrl+C" then it will quit. Otherwise it will quit when
+it has displayed everything.
+
+The problem is that you sometimes want to move back as well.
+### `less` - opposite of more
+Then you need `less`. With `less` you can move back and forth in the
+file, also you can search.
+
+    less other
+
+Similar to `more` it displays the first part of the file and waits for
+your instructions, which are somewhat similar. Next "return" you can
+use the down arrow as well to move down. The only way to quit is by
+typing "q". If you type "h" then you get the help to learn more about
+what you can do with `less`.
+
+### `wc` - print newline, word, and byte counts for each file
+We already know that `other` is a relatively long file, but how long
+is it. We can check that using `wc`.
+
+    wc other
+
+This will print the number of lines, the number of characters and the
+size in bytes of `other`.
+
+If we only want to print the number of lines than we can use the `-l`
+option.
+
+    wc -l other
+
+## Learning more about commands
+If we want to learn more about a given command we can ask the command
+for some help. Which we can do with the `--help` option or sometime
+with `-h`.
+
+    wc --help
+
+### `man` - an interface to the on-line reference manuals
+We can also check their manual if they have that.
+
+    man wc
+
+This will display the manual in a `less`-like manner.
+
+Some commands don't have it:
+
+    man cd
+
+But what do you think? Does `man` have a `man`?
+
+    man man
 
 # Summary
 1. Learned the some of the basic commands:
@@ -344,3 +466,9 @@ This command takes the
 	- Why Unix users don't like spaces in the file names
 5. Learned how to **pipe** (`|`) the output of one command to another
    command and to store the output in files (`>` and `>>`).
+
+# Further material
+
+- [Online tutorial](https://www.codecademy.com/learn/learn-the-command-line)
+- [More about Unix command line](doc/empty.md)
+   
