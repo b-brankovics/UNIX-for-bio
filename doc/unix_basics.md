@@ -44,6 +44,35 @@ your _home directory_.
 
 Prints something like: `/home/user`
 
+### `cd` - change directory
+
+The `cd` command modifies the current working directory.
+
+If you issue without specifying anything, then it changes the working
+directory to be your home directory.
+
+If you want to change to a directory inside the current directory,
+named _dirname_, type the following
+
+    cd dirname
+
+Then the working directory has been changed to that one. You can
+verify this by issuing the `pwd` command. Which prints something like:
+`/home/user/dirname`
+
+From `/home/user` to `dirname` it was enough to specify the
+`dirname`. But if you are somewhere in the filesystem you need to
+specify a different **path**.
+
+There are two types of paths:
+
+- Absolute path: `/home/user/dirname`
+- Relative path: `dirname`
+    If you are in the `/home/user` folder.
+
+    If you are in the `/home` folder, then the relative path to the
+    same location becomes `user/dirname`.
+
 
 
 # Summary
@@ -62,6 +91,8 @@ Prints something like: `/home/user`
 	- `wc`
 	- `man`
 2. Learned that Unix commands can have options that modify how they work
+2. Learned that Unix commands can have arguments that tell what to
+   open, read or modify
 3. Learned a few shortcuts:
     - `~` Home directory of the user
 	- `.` This directory
