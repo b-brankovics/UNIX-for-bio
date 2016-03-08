@@ -80,8 +80,13 @@ A little bit about the filesystem on a Unix system:
 - There is a **root** directory, `/`. All the other directories are
   located inside this directory.
 - Every user has a **home** directory, `~` or `/home/username`. When
-  you log in this is where you are by default. also this is where you
+  you log in this is where you are by default. Also this is where you
   get if you issue `cd` without arguments.
+- The current directory can be referred to as `.`. This is used for
+  relative paths.
+- The parent directory is referred to as `..`. This is used for
+  relative paths.
+- You separate the levels of directories by `/`.
 
 # Summary
 1. Learned the some of the basic commands:
