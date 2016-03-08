@@ -142,6 +142,8 @@ file names and folder names.
 
 You can use `cd`, `ls` and `pwd` to explore what you have created.
 
+Let's go to the `first_floor`
+
 ### `touch` - change file timestamps
 
 We will use this command to create empty files. To use for basic file
@@ -164,14 +166,17 @@ source file(s) and the where we want to have them or the name.
 This created a copy of `stove` in the same directory, and the new file
 is `chair`.
 
-Let's go to the `first_floor` and create a few rooms and add
-some furniture to them.
+Copy the stove to the kitchen
+
+    cp stove kitchen/stove
+
+Create a few rooms and add some furniture to them.
 
     cd house/first_floor
 	mkdir living_room study_room bathroom
 	touch chair1 chair2
 
-Now we have a few rooms and two chairs.
+Now we have a few rooms and two extra chairs.
 
 Let's create a second chair and copy them to the living_room.
 
@@ -183,7 +188,7 @@ With the help of **wildecard** characters you can specify more then
 one files or directories in a single argument. This is interpreted by
 the command line interface and all possible _matches_ are handed to
 the command as separate arguments. In this case we used `*`, which
-represents "any character(s)". So it will match both `chair` and
+represents "any character(s)". So it will match both `chair`, `chair1` and
 `chair2`. These will be both copied to the directory `living_room`.
 
 Let's create a `bedroom` and add a `bed` to it.
@@ -200,11 +205,12 @@ recursive.
 
 Let's add chairs to all of the rooms.
 
-    cp chair* *room/
+    cp chair* living_room
+    cp chair* study_room
+    cp chair* bathroom
 
-Now we have two chairs in the `living_room`, `study_room`, `bedroom` and
-`bathroom`. Oops, I guess we should have used `_room*` instead of
-`*room`, because now we have two chairs in the bathroom.
+Now we have two chairs in the `living_room`, `study_room` and
+`bathroom`. Oops, I guess we should remove the chair from the bathroom.
 
 ### `mv` - move (rename) files
 The `mv` command can move files from one location to another. This
@@ -212,15 +218,18 @@ means you can move file from one folder to another or that you rename
 the file. Because both of these will change the path that leads to the
 file.
 
-Let's remove a chair from the bathroom.
+Let's remove two chairs from the bathroom.
 
-    mv bathroom/chair1 .
+    mv bathroom/chair? .
 
-We moved a chair from the bathroom to the current directory.
+`?` is another wildcard character, it represents a single
+character. So in our case it represents `chair1` and `chair2`, but not `chair`.
+
+We moved two chairs from the bathroom to the current directory.
 
 Let's rename the other one to a bath.
 
-    mv bathroom/chair2 bathroom/bath
+    mv bathroom/chair bathroom/bath
 
 We are expanding the house and we add a new floor, and we want to move
 the bedroom to the new floor.
@@ -228,7 +237,40 @@ the bedroom to the new floor.
     mkdir ../third_floor
 	mv bedroom ../third_floor/.
 
+The bedroom is gone from the first floor, but there is one now on the
+third floor.
+
 ### `rm` - remove files or directories
+It is also important to remove files or directories. But we have to be
+careful, because unlike in a graphical environment, where the deleted
+files are moved to the trash. On command line interface the files are
+completely removed. So be careful, especially with wildcard
+characters.
+
+Let's remove the chairs that are outside of the rooms on the first
+floor.
+
+    rm chair*
+
+We can also use the `-v`, verbose, option. So we see what we delete.
+
+    rm -v stove
+
+We want to clean up the mess inside the house and remove the floor
+that was created by mistake. But these are directories, so we need the
+`-r` option as with copy.
+
+    cd ..
+	rm -r first first\ floor
+	rm -rv ../floor
+
+The second remove command remove to folders:
+- `../floor/kitchen`
+- `../floor`
+
+That is why we needed to run `rm` in a recursive fashion, so first the
+content is removed and the empty folder is removed as last.
+
 ### `echo` - display a line of text
 
 ## Reading files
