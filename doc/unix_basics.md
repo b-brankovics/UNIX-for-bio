@@ -112,10 +112,33 @@ You can create directories inside directories that are not there yet,
 by using the `-p`, parents options. This will create all the
 directories that are mentioned in the path.
 
-    mkdir -p dir4/newone/child
+    mkdir -p house/first_floor/kitchen
 
-This creates three directories: `dir4`, `newone` inside `dir4` and
-`child` inside `dir4/newone`.
+This creates three directories: `house`, `first_floor` inside `house` and
+`kitchen` inside `house/first_floor`.
+
+You can see that we used "_" to separete "first" and "floor" instead
+of a " ". Many Windows users are surprised when they get files from
+Linux users like `My_project` instead of "My project". Let's see why.
+
+Try issuing the following:
+
+    mkdir -p house/first floor/kitchen
+
+This command creates a folder inside `house` called `first` and
+creates `floor` inside the working directory plus `kitchen` inside
+`floor`.
+
+If we really want to create a "first floor" with a space, we need to
+_escape_ the space, otherwise mkdir will think we specified to
+arguments. The escape character is `\`.
+
+    mkdir -p house/first\ floor/kitchen
+
+This created the expected result. But if we use `ls` we won't see the
+escape character in the folder name, but we have to use it when we
+want to `cd` into the folder. So it is better to avoid spaces inside
+file names and folder names.
 
 You can use `cd`, `ls` and `pwd` to explore what you have created.
 
@@ -124,15 +147,87 @@ You can use `cd`, `ls` and `pwd` to explore what you have created.
 We will use this command to create empty files. To use for basic file
 operations.
 
-    touch file1
+    touch stove
 
-Creates a new file called `file1` if it did not exist before. If it
+Creates a new file called `stove` if it did not exist before. If it
 already existed, then it will change the _timestamp_. You can check
 this using `ls -l`. Wait a minute or two and `touch` the file again,
-you will see the timestamp has been changed.
+you will see the timestamp has been changed. You can also specify a
+file as an argument for `ls`, such as `ls -lh stove`.
 
 ### `cp` - copy files and directories
+To copy a file we need to use the `cp` command with two arguments: the
+source file(s) and the where we want to have them or the name.
+
+    cp stove chair
+
+This created a copy of `stove` in the same directory, and the new file
+is `chair`.
+
+Let's go to the `first_floor` and create a few rooms and add
+some furniture to them.
+
+    cd house/first_floor
+	mkdir living_room study_room bathroom
+	touch chair1 chair2
+
+Now we have a few rooms and two chairs.
+
+Let's create a second chair and copy them to the living_room.
+
+    cp chair chair2
+	cp chair* living_room/
+
+We used a **glob** by adding a **wildecard** character `*`.
+With the help of **wildecard** characters you can specify more then
+one files or directories in a single argument. This is interpreted by
+the command line interface and all possible _matches_ are handed to
+the command as separate arguments. In this case we used `*`, which
+represents "any character(s)". So it will match both `chair` and
+`chair2`. These will be both copied to the directory `living_room`.
+
+Let's create a `bedroom` and add a `bed` to it.
+
+    mkdir bedroom
+	touch bedroom/bed
+
+We also one to have a second floor with a bedroom with a bed
+inside. We need to use a special option to copy folders `-r`,
+recursive.
+
+    mkdir ../second_floor
+	cp -r bedroom/ ../second_floor/
+
+Let's add chairs to all of the rooms.
+
+    cp chair* *room/
+
+Now we have two chairs in the `living_room`, `study_room`, `bedroom` and
+`bathroom`. Oops, I guess we should have used `_room*` instead of
+`*room`, because now we have two chairs in the bathroom.
+
 ### `mv` - move (rename) files
+The `mv` command can move files from one location to another. This
+means you can move file from one folder to another or that you rename
+the file. Because both of these will change the path that leads to the
+file.
+
+Let's remove a chair from the bathroom.
+
+    mv bathroom/chair1 .
+
+We moved a chair from the bathroom to the current directory.
+
+Let's rename the other one to a bath.
+
+    mv bathroom/chair2 bathroom/bath
+
+We are expanding the house and we add a new floor, and we want to move
+the bedroom to the new floor.
+
+    mkdir ../third_floor
+	mv bedroom ../third_floor/.
+
 ### `rm` - remove files or directories
 ### `echo` - display a line of text
 
