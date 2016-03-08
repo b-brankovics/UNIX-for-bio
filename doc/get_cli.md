@@ -18,9 +18,9 @@ Also you can change from the graphical interface to only command-line. First fin
 
 ### Using Windows
 
-If you are using Windows you first have to install software that emulates a Unix system or environment. Here are two ways you can do it:
-* **[Running a virtual machine](virtual.md)**
+If you are using Windows you first have to install software that emulates a Unix system or environment. Here are a few ways you can do it:
 * **[Cygwin](cygwin.md)**
+* **[Running a virtual machine](virtual.md)**
 * **[Docker](docker.md)**
 * **[PuTTY](http://www.putty.org/)** to connect to a server running a
   Unix based operating system
@@ -31,8 +31,10 @@ You will need an **ssh** program to connect to your server.
 On such program is [PuTTY](http://www.putty.org/)
 (If you are
 working on a Linux based system it is better to stick with the command
-line of your system for the moment.)
+line of your system for the moment.) PuTTY provides access to the command line of the server, but you cannot access your files straight away. You have to establish a file transfer connection between your system and the server.
 
 ### [Using Docker](docker.md)
 
-Docker can be used with Linux or OS X operating systems as well.
+Docker can be used with Linux or OS X operating systems as well. The installation becomes more complex as we move from Linux to OS X and to Windows. Docker requires a Linux kernel (the core or base of the operating system) to communicate with. So when you install it on OS X you need an additional program that provides the substitute for the Linux kernel, it is called [boot2docker](http://boot2docker.io). On a Windows operating systems there, first an operating system is needed that can interface with **boot2docker**, so a virtual machine is needed, this is created via [VirtualBox](https://www.virtualbox.org). All these tools are packaged together for Windows users in [Docker Toolbox](https://www.docker.com/products/docker-toolbox).
+
+The following [documentation](https://docs.docker.com/windows/step_one/) shows how to install Docker on a Windows system. There are to requirements: it has to be a 64-bit system and the system must support Hardware Virtualization. These are also explained in the documentation.
