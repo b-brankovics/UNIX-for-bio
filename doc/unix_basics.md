@@ -470,5 +470,5 @@ But what do you think? Does `man` have a `man`?
 # Further material
 
 - [Online tutorial](https://www.codecademy.com/learn/learn-the-command-line)
-- [More about Unix command line](doc/empty.md)
+- [More about Unix command line](empty.md)
    
