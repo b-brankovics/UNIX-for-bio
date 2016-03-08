@@ -273,8 +273,37 @@ content is removed and the empty folder is removed as last.
 
 ### `echo` - display a line of text
 
+The `echo` command can print some text.
+
+    echo "some text"
+
+So far, we have worked with empty files. Let's create one with bit of
+text, using `echo`.
+
+    echo "The content of the file is one line" >text
+
+We have created a file `text` with a single line of text "_The
+content of the file is one line_" by telling the shell to put the
+output of the command in a file. This is done by using the `>`
+character.
+
+Let's create a new one and add extra text to it.
+
+    echo "The content of the file" >new
+	echo "Line two" >>new
+
+The `>>` character is similar to `>`, but this one will append to the
+file, if it already exists. The other one replaces its previous
+content with the new one.
+
+So we can write files and add content to them. It is time to learn to
+read as well.
+
 ## Reading files
 ### `cat` - concatenate files and print on the standard output
+This command takes the
+
+
 ### `more` - file perusal filter for crt viewing
 ### `less` - opposite of more
 ### `head` - output the first part of files
@@ -313,3 +342,5 @@ content is removed and the empty folder is removed as last.
 	- Absolute path
 	- What is the root directory
 	- Why Unix users don't like spaces in the file names
+5. Learned how to **pipe** (`|`) the output of one command to another
+   command and to store the output in files (`>` and `>>`).
