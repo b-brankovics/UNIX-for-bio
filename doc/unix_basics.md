@@ -77,27 +77,88 @@ There are two types of paths:
     same location becomes `user/dirname`.
 
 A little bit about the filesystem on a Unix system:
-- There is a **root** directory, `/`. All the other directories are
+- There is a **root** directory, "`/`". All the other directories are
   located inside this directory.
-- Every user has a **home** directory, `~` or `/home/username`. When
+- All absolute path start from the root directory "`/`". In the
+  absolute path above, `/home/user/dirname`, the first "`/`" is the
+  root directory.
+- You separate the levels of directories by "`/`".
+- Every user has a **home** directory, "`~`" or `/home/username`. When
   you log in this is where you are by default. Also this is where you
   get if you issue `cd` without arguments.
-- The current directory can be referred to as `.`. This is used for
+- The current directory can be referred to as "`.`". This is used for
   relative paths.
-- The parent directory is referred to as `..`. This is used for
+- The parent directory is referred to as "`..`". This is used for
   relative paths.
-- You separate the levels of directories by `/`.
+
+You can take a look around if you like or read forward and get
+familiar with `cd` by making new directories at the same time.
+
+## Creating and removing files and directories
+### `mkdir` - make directories
+
+The `mkdir` command create directories.
+
+    mkdir dir1
+
+Creates a directory `dir1` inside the current directory.
+You can also create multiple directories at the same time.
+
+    mkdir dir2 dir3
+
+This create two new directories: `dir2` and `dir2`.
+
+You can create directories inside directories that are not there yet,
+by using the `-p`, parents options. This will create all the
+directories that are mentioned in the path.
+
+    mkdir -p dir4/newone/child
+
+This creates three directories: `dir4`, `newone` inside `dir4` and
+`child` inside `dir4/newone`.
+
+You can use `cd`, `ls` and `pwd` to explore what you have created.
+
+### `touch` - change file timestamps
+
+We will use this command to create empty files. To use for basic file
+operations.
+
+    touch file1
+
+Creates a new file called `file1` if it did not exist before. If it
+already existed, then it will change the _timestamp_. You can check
+this using `ls -l`. Wait a minute or two and `touch` the file again,
+you will see the timestamp has been changed.
+
+### `cp` - copy files and directories
+### `mv` - move (rename) files
+### `rm` - remove files or directories
+### `echo` - display a line of text
+
+## Reading files
+### `cat` - concatenate files and print on the standard output
+### `more` - file perusal filter for crt viewing
+### `less` - opposite of more
+### `head` - output the first part of files
+### `tail` - output the last part of files
+### `wc` - print newline, word, and byte counts for each file
+### `man` - an interface to the on-line reference manuals
+
 
 # Summary
 1. Learned the some of the basic commands:
     - `ls`
 	- `pwd`
 	- `cd`
-	- `mv`
-	- `rm`
+	- `mkdir`
 	- `touch`
+    - `cp`
+    - `mv`
+	- `rm`
 	- `echo`
 	- `cat`
+	- `more`
 	- `less`
 	- `head`
 	- `tail`
