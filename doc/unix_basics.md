@@ -51,8 +51,11 @@ The `cd` command modifies the current working directory.
 If you issue without specifying anything, then it changes the working
 directory to be your home directory.
 
+When you want to change to another directory then you need to specify
+an _argument_ or _parameter_ for `cd`, which tells where to go.
+
 If you want to change to a directory inside the current directory,
-named _dirname_, type the following
+named _dirname_, type the following.
 
     cd dirname
 
@@ -73,7 +76,12 @@ There are two types of paths:
     If you are in the `/home` folder, then the relative path to the
     same location becomes `user/dirname`.
 
-
+A little bit about the filesystem on a Unix system:
+- There is a **root** directory, `/`. All the other directories are
+  located inside this directory.
+- Every user has a **home** directory, `~` or `/home/username`. When
+  you log in this is where you are by default. also this is where you
+  get if you issue `cd` without arguments.
 
 # Summary
 1. Learned the some of the basic commands:
