@@ -38,3 +38,7 @@ line interface).
 	- `.` This directory
 	- `..` The parent directory of this directory
 4. Learned the basics of the Unix filesystem
+    - Relative path
+	- Absolute path
+	- What is the root directory
+	- Why Unix users don't like spaces in the file names
