@@ -81,8 +81,8 @@ There are tons of text editors with syntax highlighting. You may use
 whichever text editor that you wish. Here I will recommend three
 fairly simple to use text editors.
 
-Here is the learning curves for a set of popular editors
-![Learning curves](http://www.manuelmagic.me/resources/Geek/Text-editors/text_editors.pdf)
+Here are the [learning curves](http://www.manuelmagic.me/resources/Geek/Text-editors/text_editors.pdf) for a set of popular editors
+
 
 
 ![Learning curves](http://www.manuelmagic.me/geek/texteditors/files/text_editors.jpg)
