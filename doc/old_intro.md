@@ -83,7 +83,7 @@ fairly simple to use text editors.
 
 Here is the learning curves for a set of popular editors
 ![Learning curves](http://www.manuelmagic.me/resources/Geek/Text-editors/text_editors.pdf)
-
+![Learning curves](http://www.manuelmagic.me/geek/texteditors/files/text_editors.jpg)
 ### Notepad++
 
 This is a text editor for Windows users, although it can be installed
