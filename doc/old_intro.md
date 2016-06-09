@@ -263,5 +263,94 @@ Open a terminal.
   
 - You can find out more about the commands by typing `man command_name`
 
+## Perl :camel:
+### Test installation
 
+To test you have **perl** up and running paste the following into the
+shell and execute it by pressing the enter key (or return key).
+
+    perl -e '$a = "!snoitalutargnoC"; $c = "*" . "=" x (length $a) . "*\n"; $b = reverse $a; print $c, "|", $b, "|\n", $c'
+
+### Writing source code
+
+Source code is a fancy name to refer to text file that contains a
+program or script.
+
+Using a text editor of your choice, create a file containing the
+following:
+
+    #!/usr/bin/perl
+    use warnings;
+    use strict;
+    
+    print "Hello, World!\n";
+
+
+Save the file with a name like `hello`. Using the command-line find the
+file and test if it's working properly by typing `perl hello`. Now make
+the file executable so you won't have to type perl before it to
+execute it by typing `chomd +x hello`. Now to type `./hello` to execute it
+and `ls -l hello` to check that we have added execution permission to
+the file (**x**).
+
+Congratulations! You have wrote a program using perl!
+
+Now a little explanation.
+
+The first line starts with a shebang `#!` followed by the location of
+perl command. This tells the shell that it needs perl to execute the
+program. To find the location of any command use the which command,
+you can try it by checking the location of perl by typing `which perl`.
+
+The lines starting with `use` are telling perl to use the given **pragmas**,
+which are really not necessary at this point, but I think it's good to
+get use to them, because they are helpful when developing code.
+
+The real action happens on the last line. The print command tells perl
+to print things coming after the command to the screen, in this case
+the string `"Hello, World!\n"` which when printed will be `Hello, World!`
+followed by a **newline**. An important thing to remember in perl you can
+use **whitespace** (spaces, tabs, newlines) freely, but you must separate
+the different commands using semicolons (`;`). If you forget to put a
+semicolon after a command you will receive an error and your program
+will not execute. (Except for the last command in the file and the
+last command in a block, but that is further in the course.)
+
+### Pseudocode
+
+First let's learn to walk be for we start running. Before learning the
+language for programming in Perl, let's learn to think like a
+program. Pseudocode is a good way to design a program or algorithm
+before writing the actual code.
+
+The program in the previous paragraph could be written in pseudo code
+like this: Print to the screen the message "Hello, World!" followed by
+a newline.
+
+Pseudocode is not meant to be read or executed by any program, but to
+be read by humans.
+
+This method allows you to break a complex problem into simple
+problems. Let's take another example, in the Unix shell exercise above
+you used a pipeline to count the number of _Penicillium rubens_ strains
+in a multifasta file. Let's write the **pseudocode** for this problem:
+
+- You can start by writing the whole problem: Count the number of
+    _Penicillium rubens_ strains in a multi fasta file
+
+    1. Read the file
+	2. Only keep the lines that contain _Penicillium rubens_ (by
+	    screening for the word "rubens")
+	3. Count the number of lines
+
+Now we have the recipe for our analysis, let's collect the necessary
+commands and use it. But it is important to check whether the
+individual steps work correctly, before accepting the output. The
+first part is very simple, just type `cat file_name` and it indeed
+prints the content of the file. Next step add our filter which
+searches for "rubens" in the lines, by using `| grep rubens`, check the
+output and we find that each line has contains "Penicillium rubens"
+and not only "rubens". So we won't be counting strains that have the
+same epithet but belong to a different genus. And finally count the
+number of lines left by using `| wc -l`.
 
