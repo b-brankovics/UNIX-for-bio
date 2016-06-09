@@ -223,8 +223,7 @@ Open a terminal.
   `cd ..` and examine the original multi fasta file, `ITS.fasta`, that
   I used to generate the sequences in the `ITS` **folder**. This file
   contains ITS sequences of _Penicillium_ strains, let's see what
-  _Penicillium rubens_ strains were used by typing `cat ITS.fasta |
-  grep rubens`.This prints all the lines conatining the pattern
+  _Penicillium rubens_ strains were used by typing `cat ITS.fasta | grep rubens`.This prints all the lines conatining the pattern
   rubens. And this is the first pipeline you used for this course, the
   `cat` command reads the file and the _**output**_ is given to `grep`
   as an _**input**_, the `|` symbol tells the shell to use the output
