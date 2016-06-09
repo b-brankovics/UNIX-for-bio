@@ -81,6 +81,9 @@ There are tons of text editors with syntax highlighting. You may use
 whichever text editor that you wish. Here I will recommend three
 fairly simple to use text editors.
 
+Here is the learning curves for a set of popular editors
+![Learning curves](http://www.manuelmagic.me/resources/Geek/Text-editors/text_editors.pdf)
+
 ### Notepad++
 
 This is a text editor for Windows users, although it can be installed
