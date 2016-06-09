@@ -114,24 +114,29 @@ Here are a few very basic and very important commands. The options
 mentioned in the option column are not always neccesary, they change
 how the given command works.
 
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
 
 **Basic Unix commands:**
-Command | option | description
---------|--------|------------
-pwd | | Print name of current/working directory
-ls | -l | List directory contents
-cd | | Change the current/working directory to the directory specified (by default to home folder)
-mkdir | -p | Creat new directory
-cp | | Copy files and directories
-mv | | Move (rename) files
-file | | Determine file type
-cat | | Concatenate files and print on the standard output
-less | | Displays content of the file and allows you to scroll throught and search for patterns
-chmod | +x | Change file mode bits (We need this to make files executable)
-which | | Locate the executable file of the given command
-man | | An interface to the on-line reference manuals
-wc | -l | Print newline, word, and byte counts for each file
-rm | -r | Remove files or directories
+
+|Command | option | description|
+|--------|--------|------------|
+|pwd | | Print name of current/working directory|
+|ls | -l | List directory contents|
+|cd | | Change the current/working directory to the directory specified (by default to home folder)|
+|mkdir | -p | Creat new directory|
+|cp | | Copy files and directories|
+|mv | | Move (rename) files|
+|file | | Determine file type|
+|cat | | Concatenate files and print on the standard output|
+|less | | Displays content of the file and allows you to scroll throught and search for patterns|
+|chmod | +x | Change file mode bits (We need this to make files executable)|
+|which | | Locate the executable file of the given command|
+|man | | An interface to the on-line reference manuals|
+|wc | -l | Print newline, word, and byte counts for each file|
+|rm | -r | Remove files or directories|
 
 <table>
 <tr><td>Command </td><td> option </td><td> description </td></tr>
