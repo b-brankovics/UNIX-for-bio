@@ -133,6 +133,23 @@ man | | An interface to the on-line reference manuals
 wc | -l | Print newline, word, and byte counts for each file
 rm | -r | Remove files or directories
 
+<table>
+<tr><td>Command </td><td> option </td><td> description </td></tr>
+<tr><td>pwd </td><td> </td><td> Print name of current/working directory</td></tr>
+<tr><td>ls </td><td> -l </td><td> List directory contents</td></tr>
+<tr><td>cd </td><td> </td><td> Change the current/working directory to the directory specified (by default to home folder)</td></tr>
+<tr><td>mkdir </td><td> -p </td><td> Creat new directory</td></tr>
+<tr><td>cp </td><td> </td><td> Copy files and directories</td></tr>
+<tr><td>mv </td><td> </td><td> Move (rename) files</td></tr>
+<tr><td>file </td><td> </td><td> Determine file type</td></tr>
+<tr><td>cat </td><td> </td><td> Concatenate files and print on the standard output</td></tr>
+<tr><td>less </td><td> </td><td> Displays content of the file and allows you to scroll throught and search for patterns</td></tr>
+<tr><td>chmod </td><td> +x </td><td> Change file mode bits (We need this to make files executable)</td></tr>
+<tr><td>which </td><td> </td><td> Locate the executable file of the given command</td></tr>
+<tr><td>man </td><td> </td><td> An interface to the on-line reference manuals</td></tr>
+<tr><td>wc </td><td> -l </td><td> Print newline, word, and byte counts for each file</td></tr>
+<tr><td>rm </td><td> -r </td><td> Remove files or directories</td></tr>
+</table
 #### A quick exercise to show what the above commands do
 
 Open a terminal.
