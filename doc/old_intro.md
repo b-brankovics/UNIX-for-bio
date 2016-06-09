@@ -149,7 +149,7 @@ rm | -r | Remove files or directories
 <tr><td>man </td><td> </td><td> An interface to the on-line reference manuals</td></tr>
 <tr><td>wc </td><td> -l </td><td> Print newline, word, and byte counts for each file</td></tr>
 <tr><td>rm </td><td> -r </td><td> Remove files or directories</td></tr>
-</table
+</table>
 #### A quick exercise to show what the above commands do
 
 Open a terminal.
