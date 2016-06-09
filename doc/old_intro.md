@@ -143,13 +143,13 @@ Open a terminal.
 - Type `cd ..` This will move you to the parent directory of the
   current directory
 
-- Type `pwd` you will see that you have moved up one step in the path
+- Type `pwd` you will see that you have moved up one folder in the path
 
 - Type `ls` this will list all the files and directories in the
   current directory
 
 - Type `ls -l` this will also list all the files and directories, but
-  now it displays the file mode bits, owner, file size, last
+  now. it also displays the file mode bits, owner, file size, last
   modification and name.
 
 - Now go back to your home directory by typing `cd`
@@ -161,20 +161,33 @@ Open a terminal.
 - Change to the new folder by typing `cd new_dir`
 
 - Now creat a text file with containing a list of all the files and
-  folders in your home directory by typing `ls -a ~ >list` (the `-a`
-  option changes the behaviour of `ls`; `~` is a shorthand for the
+  folders in your home directory by typing
+
+        ls -a ~ >list
+
+	(the `-a` option changes the behaviour of `ls`; `~` is a shorthand for the
   _path of your home folder_; `>` this symbol tells the shell that
   instead of printing the output of the program to the screen, save it
   to a file)
   
 	- You can check that a new file is created by typing `ls -l`
 
-- You can make a copy of the file by typing `cp list ls_output.txt`
-  and you can rename the file by typing `mv list original_file`. You
-  can delete a file by typing `rm file_name`, _but be carful because
-  unlike in Windows or graphical environments in general the **deleted
-  file doesn't end up in the trash, but is deleted permanently!**_
-  
+- You can make a copy of the file by typing
+
+        cp list ls_output.txt
+		
+    and you can rename the file by typing
+
+        mv list original_file
+
+    You can delete a file by typing
+
+        rm file_name
+
+    _But be carful because unlike in Windows or graphical environments
+  in general the **deleted file doesn't end up in the trash, but is
+  deleted permanently!**_
+    
 - Type `file list` this will tell you that it is a **UTF-8 Unicode
   text file**; this a simple so called **plain text file**, which
   means if you open it with any text editor you can make sense of it
@@ -185,11 +198,11 @@ Open a terminal.
   what `tac list` does, see if you can figure out the difference
   
 - Let's go back to our home folder by typing `cd` and delete the newly
-  created folder, because it is a folder we can't just use `rm
-  new_dir`, we need to type `rm -r new_dir`. You can also try `rm
-  new_dir` and see what happens.
+  created folder, because it is a folder we can't just use
+  `rm new_dir`, we need to type `rm -r new_dir`. You can also try
+  `rm new_dir` and see what happens.
   
-- Now to see how valuable this command is for dealing with sequences,
+- Now to see how valuable the `cat` command are for dealing with sequences,
   head over to the **sequences** folder by typing `cd sequences/ITS`
   and take a look around with `ls` and examine a few files with
   `cat`. Then type `cat *.fas >ITS.fas` this command creats a
@@ -224,7 +237,8 @@ Open a terminal.
   `cd ..` and examine the original multi fasta file, `ITS.fasta`, that
   I used to generate the sequences in the `ITS` **folder**. This file
   contains ITS sequences of _Penicillium_ strains, let's see what
-  _Penicillium rubens_ strains were used by typing `cat ITS.fasta | grep rubens`.This prints all the lines conatining the pattern
+  _Penicillium rubens_ strains were used by typing
+  `cat ITS.fasta | grep rubens`.This prints all the lines conatining the pattern
   rubens. And this is the first pipeline you used for this course, the
   `cat` command reads the file and the _**output**_ is given to `grep`
   as an _**input**_, the `|` symbol tells the shell to use the output
@@ -233,8 +247,8 @@ Open a terminal.
   
 - Now let's see how many ITS sequences from _P. rubens_ strains are in
   the file by typing `cat ITS.fasta | grep rubens | wc -l` (You could
-  also use `cat ITS.fasta | grep -c rubense` or `grep -c rubens
-  ITS.fasta`). The `wc -l` command counts the number of lines in the
+  also use `cat ITS.fasta | grep -c rubense` or
+  `grep -c rubens ITS.fasta`). The `wc -l` command counts the number of lines in the
   input. If you want to check if there are really 134 sequence records
   in the file, type `cat ITS.fasta | grep ">" | wc -l`. (This will
   count the number of lines containing `>` and we need to use
