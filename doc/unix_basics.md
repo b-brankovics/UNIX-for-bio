@@ -97,7 +97,7 @@ familiar with `cd` by making new directories at the same time.
 ## Creating and removing files and directories
 ### `mkdir` - make directories
 
-The `mkdir` command create directories.
+The `mkdir` command creates directories.
 
     mkdir dir1
 
@@ -106,7 +106,7 @@ You can also create multiple directories at the same time.
 
     mkdir dir2 dir3
 
-This create two new directories: `dir2` and `dir2`.
+This creates two new directories: `dir2` and `dir2`.
 
 You can create directories inside directories that are not there yet,
 by using the `-p`, parents options. This will create all the
@@ -118,8 +118,8 @@ This creates three directories: `house`, `first_floor` inside `house` and
 `kitchen` inside `house/first_floor`.
 
 You can see that we used "_" to separete "first" and "floor" instead
-of a " ". Many Windows users are surprised when they get files from
-Linux users like `My_project` instead of "My project". Let's see why.
+of a " " (space). Many Windows users are surprised when they get files from
+Linux users: like `My_project` instead of `My project`. Let's see why.
 
 Try issuing the following:
 
@@ -130,19 +130,21 @@ creates `floor` inside the working directory plus `kitchen` inside
 `floor`.
 
 If we really want to create a "first floor" with a space, we need to
-_escape_ the space, otherwise mkdir will think we specified to
+_escape_ the space, otherwise mkdir will think we specified two
 arguments. The escape character is `\`.
 
     mkdir -p house/first\ floor/kitchen
 
 This created the expected result. But if we use `ls` we won't see the
 escape character in the folder name, but we have to use it when we
-want to `cd` into the folder. So it is better to avoid spaces inside
+want to `cd` into the folder. So it is better to avoid spaces in
 file names and folder names.
 
 You can use `cd`, `ls` and `pwd` to explore what you have created.
 
 Let's go to the `first_floor`
+
+    cd house/first_floor
 
 ### `touch` - change file timestamps
 
@@ -172,15 +174,13 @@ Copy the stove to the kitchen
 
 Create a few rooms and add some furniture to them.
 
-    cd house/first_floor
 	mkdir living_room study_room bathroom
 	touch chair1 chair2
 
 Now we have a few rooms and two extra chairs.
 
-Let's create a second chair and copy them to the living_room.
+Let's copy all the chairs to the living_room.
 
-    cp chair chair2
 	cp chair* living_room/
 
 We used a **glob** by adding a **wildecard** character `*`.
@@ -188,7 +188,8 @@ With the help of **wildecard** characters you can specify more then
 one files or directories in a single argument. This is interpreted by
 the command line interface and all possible _matches_ are handed to
 the command as separate arguments. In this case we used `*`, which
-represents "any character(s)". So it will match both `chair`, `chair1` and
+represents "any character(s)" (any is used in its widest sense,
+nothing or something). So it will match `chair`, `chair1` and
 `chair2`. These will be both copied to the directory `living_room`.
 
 Let's create a `bedroom` and add a `bed` to it.
@@ -196,9 +197,9 @@ Let's create a `bedroom` and add a `bed` to it.
     mkdir bedroom
 	touch bedroom/bed
 
-We also one to have a second floor with a bedroom with a bed
-inside. We need to use a special option to copy folders `-r`,
-recursive.
+We also want to have a second floor with a bedroom with a bed
+inside it. We need to use a special option to copy folders `-r`,
+_r_ stands for recursive.
 
     mkdir ../second_floor
 	cp -r bedroom/ ../second_floor/
@@ -209,12 +210,12 @@ Let's add chairs to all of the rooms.
     cp chair* study_room
     cp chair* bathroom
 
-Now we have two chairs in the `living_room`, `study_room` and
+Now we have three chairs in the `living_room`, `study_room` and
 `bathroom`. Oops, I guess we should remove the chair from the bathroom.
 
 ### `mv` - move (rename) files
 The `mv` command can move files from one location to another. This
-means you can move file from one folder to another or that you rename
+means you can move files from one folder to another or that you rename
 the file. Because both of these will change the path that leads to the
 file.
 
@@ -241,11 +242,16 @@ The bedroom is gone from the first floor, but there is one now on the
 third floor.
 
 ### `rm` - remove files or directories
-It is also important to remove files or directories. But we have to be
-careful, because unlike in a graphical environment, where the deleted
+It is also important to remove files or directories. But **we have to be
+careful**, because unlike in a graphical environment, where the deleted
 files are moved to the trash. On command line interface the files are
-completely removed. So be careful, especially with wildcard
+completely removed. So be careful, especially with _wildcard_
 characters.
+
+> **Tip:** Before using the `rm` command test using `ls` what the
+> _glob_ includes. Example: you want to remove all the "chair"s, which
+> would be `rm chair*`, first check `ls chair*` to see that it doesn't
+> match anything unexpected.
 
 Let's remove the chairs that are outside of the rooms on the first
 floor.
@@ -264,12 +270,13 @@ that was created by mistake. But these are directories, so we need the
 	rm -r first first\ floor
 	rm -rv ../floor
 
-The second remove command remove to folders:
+The second remove command remove two folders:
 - `../floor/kitchen`
 - `../floor`
 
 That is why we needed to run `rm` in a recursive fashion, so first the
-content is removed and the empty folder is removed as last.
+content is removed and the empty folder is removed as last. (Actually,
+each folder "contains" itself, more precisely a _link_ to itself.)
 
 ### `echo` - display a line of text
 
@@ -277,7 +284,7 @@ The `echo` command can print some text.
 
     echo "some text"
 
-So far, we have worked with empty files. Let's create one with bit of
+So far, we have worked with empty files. Let's create one with a bit of
 text, using `echo`.
 
     echo "The content of the file is one line" >text
@@ -309,18 +316,19 @@ arguments, concatenates them and prints them.
     cat new
 	cat text new
 
-Let's create file with a single line and concatenate it many times to
-the new file. And add line with "The End".
+Let's create a file with a single line and concatenate it many times to
+the new file. And finish by adding a final line, "The End".
 
     echo "Extra line to make it longer" >line
 	cat line line line line line line line >lines
 	cat lines lines lines lines lines lines >>new
 	echo "The End" >>new
 
-So `new` is 45 lines long.
+So `new` is 45 lines long. (You can check this by using the command
+`wc -l new`, which prints the number of lines. **wc** - word count.)
 
 ### `head` - output the first part of files
-Sometimes we want to see only a part of the content.
+Sometimes we want to see only part of the content.
 
     head new
 
@@ -361,8 +369,8 @@ only the second line
     head -2 new | tail -1
 
 The head command read the `new` file and printed the first two lines,
-which were not printed on the screen, bit were fed to the tail
-command, which printed the last line of what it got.
+which were not printed on the screen, bit were "fed" to the tail
+command, which printed the last line of what it got (the second line).
 
 Let's create an extra long file by using parts of the `new` file.
 
@@ -470,5 +478,5 @@ But what do you think? Does `man` have a `man`?
 # Further material
 
 - [Online tutorial](https://www.codecademy.com/learn/learn-the-command-line)
-- [More about Unix command line](empty.md)
+
    
