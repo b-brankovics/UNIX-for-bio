@@ -478,5 +478,5 @@ But what do you think? Does `man` have a `man`?
 # Further material
 
 - [Online tutorial](https://www.codecademy.com/learn/learn-the-command-line)
-
+- [Software carpentry: Shell Novice](https://swcarpentry.github.io/shell-novice)
    
